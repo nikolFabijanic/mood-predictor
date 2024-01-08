@@ -1,0 +1,17 @@
+{
+    "short_name": "HueHouse",
+    "name": "HueHouse",
+    "icons": [
+      {
+        "src": "img/cactus.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "../mood_predictor_pwa/index.html",
+    "background_color": "#86DD81",
+    "display": "standalone",
+    "scope": "../mood_predictor_pwa/",
+    "theme_color": "#86DD81"
+}

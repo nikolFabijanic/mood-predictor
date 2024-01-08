@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>dashboard</title>
+</head>
+<body id="dashboard">
+    <header class="navBar">
+         <a href="friendCabinet.html"><button><img id="cactus" src="img/cactus.png" alt=""></button></a>
+    </header>
+    <section class="greenhouse">
+        <img id="greenhouseImg" src="img/greenhousebg.png" alt="">
+        <div class="lamp-container">
+            <div class="lamp-wrapper">
+                <div class="lamp-rope"></div>
+                <div class="lamp">
+                    <div class="lamp-part -top"></div>
+                    <div class="lamp-part -body"></div>
+                    <div class="lamp-part -bottom"></div>
+                    <div class="blub"></div>
+                </div>
+                <div class="wall-light-shadow" id="lamp1"></div>
+            </div>
+            <div class="lamp-wrapper -two">
+                <div class="lamp-rope -small"></div>
+                <div class="lamp -small">
+                    <div class="lamp-part -top -small"></div>
+                    <div class="lamp-part -body -small"></div>
+                    <div class="lamp-part -bottom -small"></div>
+                    <div class="blub"></div>
+                </div>
+                <div class="wall-light-shadow" id="lamp2"></div>
+            </div>
+            <div class="lamp-wrapper -three">
+                <div class="lamp-rope -small"></div>
+                <div class="lamp -small">
+                    <div class="lamp-part -top -small"></div>
+                    <div class="lamp-part -body -small"></div>
+                    <div class="lamp-part -bottom -small"></div>
+                    <div class="blub"></div>
+                </div>
+                <div class="wall-light-shadow" id="lamp3"></div>
+            </div>
+            <div class="lamp-wrapper -four">
+                <div class="lamp-rope"></div>
+                <div class="lamp">
+                    <div class="lamp-part -top"></div>
+                    <div class="lamp-part -body"></div>
+                    <div class="lamp-part -bottom"></div>
+                    <div class="blub"></div>
+                </div>
+                <div class="wall-light-shadow" id="lamp4"></div>
+            </div>
+        </div>
+        <div id="myPopup" class="tipPopup">
+          <div class="tip-content">
+            <img src="img/huey.png" alt="">
+            <p>Hi there, here's a petal for your thoughts. based on the hue's you have submitted we recommend you maintain the positive mindset by completing a minor task so you can get a sense of satisfaction</p>
+          </div>
+        </div>
+        
+        <div class="container">
+            <ul id="menu">
+                   <a class="menu-button icon-plus" id="open-menu" href="#menu" title="Show navigation"><img src="img/plant.png" alt=""></a>
+                   <a class="menu-button icon-minus" href="#0" title="Hide navigation"><img src="img/plant.png" alt=""></a>
+                   <button id="petals" class="menu-item">
+                        <img class="petals" src="img/petals.png" alt="">
+                   </button>
+                   <li class="menu-item">
+                        <img class="lightBulb" src="img/light-bulb.png" alt="">
+                   </li>
+               </ul>
+       </div>
+      
+    </section>
+    <section class="plantBtns">
+        <a href="moodPicker.html"><button class="enterMood">Enter<br>Mood</button></a>
+        <div class="oval"></div>
+    </section>
+
+
+    <script>
+        // gets item from local storage and displays it (lamp colors)
+        function setStoredColor(elementId, storageKey) {
+            const storedColor = localStorage.getItem(storageKey);
+            if (storedColor) {
+                const element = document.getElementById(elementId);
+                element.style.backgroundColor = storedColor;
+            }
+        }
+
+        window.onload = function() {
+            setStoredColor('lamp1', 'elementColor1');
+            setStoredColor('lamp2', 'elementColor2');
+            setStoredColor('lamp3', 'elementColor3');
+            setStoredColor('lamp4', 'elementColor4');
+        };
+
+
+        // onclick popup for mental health tip
+        var tipPopup = document.getElementById("myPopup");
+
+        var tipBtn = document.getElementById("petals");
+        
+        // displays popup
+        tipBtn.onclick = function() {
+            tipPopup.style.display = "block";
+        }
+
+        // hides popup
+        tipPopup.onclick = function() {
+            tipPopup.style.display = "none";
+        }
+
+        
+        // $('[has-ripple="true"]').click(function () {
+        //     $(this).toggleClass('clicked');
+        //     $('.menu').toggleClass('open');
+        // });
+
+        // $('.menu a').each(function (index) {
+        //     var thismenuItem = $(this);
+        
+        //     thismenuItem.click(function (event) {
+        //         event.preventDefault();
+                
+        //         $('.menuitem-wrapper').eq(index).addClass('spin');
+                
+        //         var timer = setTimeout(function () {
+        //             $('body').removeAttr('class').addClass('bg-'+index);
+        //             $('.menuitem-wrapper').eq(index).removeClass('spin');
+        //             $('.menu').removeClass('open');
+        //             $('.menu-btn').removeClass('clicked');
+        //         }, 800);
+        //     });
+        //     });
+
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+</body>
+</html>

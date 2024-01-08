@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Mood Picker</title>
+</head>
+<body id="moodPicker">
+    <div id="topBg">
+        <header>
+            <a href="dashboard.html"><img src="img/home-2.png" alt=""></a>
+        </header>
+        <h1>How are we feeling right now?</h1>
+        <section class="sliders">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+                <div class="emotions">
+                    <p>Sad</p>
+                    <p>Happy</p>
+                </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+                <div class="emotions">
+                    <p>Angry</p>
+                    <p>Calm</p>
+                </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+                <div class="emotions">
+                    <p>Afraid</p>
+                    <p>Brave</p>
+                </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+                <div class="emotions">
+                    <p>Tired</p>
+                    <p>Content</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="confirm">
+        <button class="confirmBtn" id="changeColor" onclick="changeColor()">Confirm</button>
+      </div>
+    <script src="js/main.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+</body>
+</html>
